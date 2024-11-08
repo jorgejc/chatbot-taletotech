@@ -54,11 +54,30 @@ cd chatbot-talento-tech
 
 ```
 
-### 2. Instalar dependencias
+### 3. Configuración del proyecto
+
+1. Crea un archivo `.env` en la raíz del proyecto.
+2. Añade tus credenciales de AWS al archivo `.env` en el siguiente formato:
+
+   ```dotenv
+   AWS_ACCESS_KEY_ID=TU_ACCESS_KEY_ID
+   AWS_SECRET_ACCESS_KEY=TU_SECRET_ACCESS_KEY
+   AWS_REGION=us-east-1  # O la región que estés usando
+
+
+### 4. Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
+
+
+### 5. **Protección adicional**
+Aunque tu archivo `.env` no se sube al repositorio (si está en `.gitignore`), siempre es bueno advertir a los usuarios que protejan sus credenciales y no las compartan públicamente.
+
+### 6. **Uso de servicios de gestión de secretos**
+En proyectos más avanzados o de producción, es recomendable usar un servicio de gestión de secretos como **AWS Secrets Manager** o **HashiCorp Vault** para almacenar y acceder a las credenciales de forma segura en lugar de depender de archivos `.env`.
+
 
 ### Ejecutar aplicación
 ```bash
